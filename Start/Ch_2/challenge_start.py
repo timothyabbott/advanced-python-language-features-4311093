@@ -12,8 +12,22 @@
 # combined string will not contain any duplicate characters
 
 
-def string_combiner(*args, unique=False):
+def string_combiner(*args, unique=False ):
+    """
+    string_combiner(*args, unique=False )
+    A function to combine strings and inst in 'args
+    Paramsaters: 
+    args: one or morestrings and numbers, other types ignored
+    unique: boolean specifies if only unique values should be returned in the string
+    """
     result = ""
+    for arg in args:
+        if isinstance(arg,str):
+            result = result + arg
+        else:
+            result= result +str(arg)
+    if unique:
+        result = "".join(set(result))
 
     # YOUR CODE HERE
 

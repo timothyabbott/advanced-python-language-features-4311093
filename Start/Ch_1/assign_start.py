@@ -12,6 +12,12 @@ print(x)
 
 
 # TODO: The assignment expression is useful for writing concise code
+# before the walrus
+#   
+the_str = input('Value?')
+while the_str != 'exit':
+    print(the_str)
+    the_str = input('Value?')
 
 
 # TODO: The walrus operator can help reduce redundant function calls
